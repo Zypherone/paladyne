@@ -1,0 +1,89 @@
+html, body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 100%;
+
+}
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+  transition: opacity 3s;
+
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+#layout {
+  display: grid;
+  height: 100%; 
+  grid-auto-rows: 50px auto;
+  grid-auto-columns: 200px auto;
+}
+
+
+
+#logo {
+  background: teal;
+  height: 50px;
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+
+#menu {
+  grid-area: 2 / 1 / span 2 / span 1;
+}
+
+#menu a {
+  color: purple;
+  display: block;
+  font-size: 20px;
+  padding: 2px 5px;
+}
+
+.pages {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.content {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+  transition: opacity 4s;
+}
+
+.pages > .content:target ~ .content:last-child,
+.pages > .content {
+  display: none;
+  opacity: 0;
+}
+
+.pages > :last-child,
+.pages > .content:target {
+  background: #fff;
+  display: block;
+  opacity: 1;
+}
+
+.content h1 {
+  font-size: 30px;
+}
+
+.content p {
+  margin: 15px 0;
+}
+
+footer {
+  grid-area: 3 / 2/ span 1 / span 1;
+}

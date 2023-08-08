@@ -1,0 +1,155 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#logo-animate {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+#logo-placement {
+  background: blue;
+  height: 200px;
+  margin: -10% 0 0 0;
+  position: relative;
+  width: 200px;
+  animation: 1s linear 0s 1 forwards logo-opening;
+  animation-delay: 6.5s;
+  overflow: hidden;
+}
+
+#logo-placeholder {
+
+}
+
+#notepad-placeholder {
+  background: pink;
+  height: 200px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+
+@keyframes notefade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-opening {
+  from {
+    width: 0;
+  }
+  to {
+    width: 500px;
+  }
+}
+
+#notepad-1,
+#notepad-2,
+#notepad-3,
+#notepad-4,
+#notepad-5,
+#notepad-6,
+#notepad-7 {
+  display: block;
+  border-radius: 3px;
+  height: 70px;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  position: absolute;
+  top: 50%;
+  width: 70px;
+  opacity: 0;
+  animation: 2s linear 0s 1 forwards notefade;
+}
+
+#notepad-1{
+  background: red;
+  transform: translate(-50px, -50px) rotateZ(291deg);
+  z-index: 1;
+  animation-delay: 0s;
+}
+
+#notepad-2 {
+  background: green;
+  transform: translate(-20px, -50px) rotateZ(324deg);
+  z-index: 2;
+  animation-delay: 1s;
+}
+
+#notepad-3 {
+  background: brown;
+  transform: translate(5px, -40px) rotateZ(85deg);
+  z-index: 3;
+  animation-delay: 2s;
+}
+
+#notepad-4 {
+  background: orange;
+  transform: translate(20px, -20px) rotateZ(206deg);
+  z-index: 4;
+  animation-delay: 3s;
+}
+
+#notepad-5 {
+  background: gray;
+  transform: translate(25px, 10px) rotateZ(329deg);
+  z-index: 5;
+  animation-delay: 4s;
+}
+
+#notepad-6 {
+  background: teal;
+  transform: translate(5px, 40px) rotateZ(13deg);
+  z-index: 6;
+  animation-delay: 5s;
+}
+
+#notepad-7 {
+  background: purple;
+  transform: translate(-25px, 49px) rotateZ(47deg);
+  z-index: 7;
+  animation-delay: 6s;
+}
+
+
+#company-name-placeholder {
+  position: relative;
+}
+
+#company-name-placement {
+  position: relative;
+}
+
+/*
+#company-name-1 {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+*/
+
+
+#company-name-1 {
+  text-shadow: 
+    -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff,
+    -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+}
+
+#company-name-1:before {
+  content: attr(title);
+}
+
+#company-name-2 {
+  display: none;
+}
